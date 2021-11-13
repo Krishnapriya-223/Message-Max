@@ -7,24 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class SignUpPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sign_up_page);
 
-        TextView textView = findViewById(R.id.sign_up_screen);
+        TextView textView = findViewById(R.id.log_in_screen);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openSignUpPage();
+                openLogInPage();
             }
         });
 
     }
-    public void openSignUpPage(){
-        Intent intent = new Intent(this, SignUpPage.class);
+    public void openLogInPage(){
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

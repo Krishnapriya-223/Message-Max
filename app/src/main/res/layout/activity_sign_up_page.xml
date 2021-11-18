@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E4E4E4"
-    tools:context=".MainActivity">
+    tools:context=".SignUpPage">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                     android:layout_width="428dp"
                     android:layout_height="350dp"
                     android:layout_gravity="bottom|center"
-                    android:layout_marginTop="460dp"
+                    android:layout_marginTop="475dp"
                     android:background="@drawable/back"
                     android:orientation="vertical"
                     android:scaleX="1"
@@ -68,10 +68,10 @@
 
                     <TextView
                         android:id="@+id/log_in_screen"
-                        android:layout_width="86dp"
-                        android:layout_height="52dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginBottom="20dp"
                         android:background="@drawable/underline"
                         android:clickable="true"
                         android:enabled="true"
@@ -131,7 +131,7 @@
                         android:background="@drawable/edit_bg"
                         android:drawableEnd="@drawable/ic_baseline_account_circle_24"
                         android:drawableRight="@drawable/ic_baseline_account_circle_24"
-                        android:inputType="text"
+                        android:inputType="textPersonName"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:textColor="#1E1E1E"

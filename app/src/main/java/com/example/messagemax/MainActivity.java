@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 pressed = false;
             }
         };
+new Handler().postDelayed(runnable, 2000);
 
-        new Handler().postDelayed(runnable, 2000);
 
     }
 }

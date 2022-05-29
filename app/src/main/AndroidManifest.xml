@@ -13,7 +13,7 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".cnct_page"
+            android:name=".ChatActivity"
             android:exported="false" />
         <activity
             android:name=".SignUpPage"

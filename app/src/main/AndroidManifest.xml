@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MessagerMax">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".cnct_page"
             android:exported="false" />
         <activity

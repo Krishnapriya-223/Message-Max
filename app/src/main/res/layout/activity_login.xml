@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E4E4E4"
-    tools:context=".SignUpPage">
+    tools:context=".LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -44,45 +44,74 @@
                     android:layout_width="match_parent"
                     android:layout_height="350dp"
                     android:layout_gravity="bottom|center"
-                    android:layout_marginTop="475dp"
+                    android:layout_marginTop="395dp"
                     android:background="@drawable/back"
                     android:orientation="vertical"
-                    android:scaleX="1"
-                    android:scaleY="1"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="MissingConstraints">
 
-
                     <TextView
+                        android:id="@+id/forget_password"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Already have an account"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Forgot password?"
                         android:textColor="#ffffff"
-                        android:textSize="24dp"
-                        app:layout_constraintBottom_toTopOf="@+id/log_in_screen_text"
+                        android:textSize="20dp"
+                        android:background="@drawable/underline"
+                        app:layout_constraintBottom_toTopOf="@id/no_account_text"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
-                        android:id="@+id/log_in_screen_text"
+                        android:id="@+id/no_account_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Don't have an account"
+                        android:textColor="#ffffff"
+                        android:textSize="24dp"
+                        app:layout_constraintBottom_toTopOf="@+id/sign_up_screen_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/sign_up_screen_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:background="@drawable/underline"
                         android:clickable="true"
                         android:enabled="true"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="Log In"
+                        android:text="Sign Up"
                         android:textColor="#ffffff"
                         android:textSize="26dp"
+                        app:layout_constraintBottom_toTopOf="@id/terms_and_conditions"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/terms_and_conditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_medium"
+
+                        android:layout_marginBottom="40dp"
+                        android:gravity="center"
+                        android:text="Click here to view our\nTerms and Conditions"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
+
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -100,70 +129,38 @@
                     android:scaleY="1">
 
                     <TextView
-                        android:id="@+id/sign_up_text"
+                        android:id="@+id/login_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="50dp"
                         android:fontFamily="@font/poppins_bold"
                         android:letterSpacing="0.1"
-                        android:text="SIGN UP"
+                        android:text="LOG IN"
                         android:textAllCaps="true"
                         android:textColor="#E91EC7"
                         android:textSize="40dp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintEnd_toEndOf="parent"/>
 
-                    <TextView
-                        android:id="@+id/name_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="55dp"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Name"
-                        android:textColor="#000000"
-                        android:textSize="24dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/sign_up_text" />
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/name_entered"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="50dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="50dp"
-                        android:background="@drawable/edit_bg"
-                        android:drawableEnd="@drawable/ic_baseline_account_circle_24"
-                        android:drawableRight="@drawable/ic_baseline_account_circle_24"
-                        android:inputType="textPersonName"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:textColor="#1E1E1E"
-                        android:textSize="20dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/name_text" />
 
                     <TextView
                         android:id="@+id/email_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="55dp"
+                        android:layout_marginStart="55dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppins_semibold"
                         android:text="Email"
                         android:textColor="#000000"
                         android:textSize="24dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/name_entered" />
+                        app:layout_constraintTop_toBottomOf="@id/login_text"
+                        app:layout_constraintStart_toStartOf="parent" />
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/email_entered_signup"
+                        android:id="@+id/email_entered_login"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
@@ -180,9 +177,9 @@
                         android:textColor="#1E1E1E"
                         android:textColorHint="#B34B4B4B"
                         android:textSize="20dp"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/email_text" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/email_text"/>
 
                     <TextView
                         android:id="@+id/password_text"
@@ -194,11 +191,11 @@
                         android:text="Password"
                         android:textColor="#000000"
                         android:textSize="24dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/email_entered_signup" />
+                        app:layout_constraintTop_toBottomOf="@id/email_entered_login"
+                        app:layout_constraintStart_toStartOf="parent"/>
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/password_entered_signup"
+                        android:id="@+id/password_entered_login"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
@@ -213,46 +210,13 @@
                         android:paddingRight="10dp"
                         android:textColor="#1E1E1E"
                         android:textSize="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/password_text" />
+                        app:layout_constraintTop_toBottomOf="@id/password_text"/>
 
-                    <TextView
-                        android:id="@+id/retype_password_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="55dp"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Re-type password"
-                        android:textColor="#000000"
-                        android:textSize="24dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/password_entered_signup" />
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/retype_password_entered"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="50dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="50dp"
-                        android:background="@drawable/edit_bg"
-                        android:drawableEnd="@drawable/ic_baseline_lock_24"
-                        android:drawableRight="@drawable/ic_baseline_lock_24"
-                        android:inputType="textPassword"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:textColor="#1E1E1E"
-                        android:textSize="20dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/retype_password_text" />
-                    />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/signup_button"
+                        android:id="@+id/login_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -260,13 +224,14 @@
                         android:background="@drawable/button_bg"
                         android:clickable="true"
                         android:fontFamily="@font/poppins_bold"
-                        android:text="Sign Up"
+                        android:text="Log In"
                         android:textAllCaps="false"
                         android:textColor="#ffffff"
                         android:textSize="24dp"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/retype_password_entered" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/password_entered_login"
+                        />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

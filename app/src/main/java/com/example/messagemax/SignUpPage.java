@@ -1,6 +1,7 @@
 package com.example.messagemax;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,10 +13,12 @@ public class SignUpPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setStatusBarColor(ContextCompat.getColor(SignUpPage.this, R.color.pink));
+
         setContentView(R.layout.activity_sign_up_page);
 
-        TextView textView = findViewById(R.id.log_in_screen);
-        textView.setOnClickListener(new View.OnClickListener() {
+        TextView log_in_screen_text = findViewById(R.id.log_in_screen_text);
+        log_in_screen_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openLogInPage();
@@ -24,7 +27,7 @@ public class SignUpPage extends AppCompatActivity {
 
     }
     public void openLogInPage(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 }
